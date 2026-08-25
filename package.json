@@ -1,0 +1,13 @@
+{
+  "name": "ehp-mobile-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "expo start"
+  },
+  "dependencies": {
+    "expo": "latest",
+    "react": "latest",
+    "react-native": "latest"
+  }
+}
