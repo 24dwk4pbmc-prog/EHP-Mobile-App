@@ -25,7 +25,7 @@ export default function AppNavigator() {
           name="Home"
           component={HomeScreen}
         />
-
+import ProfileSetupScreen from "../screens/ProfileSetupScreen";
         <Stack.Screen
           name="Profile"
           component={ProfileScreen}
