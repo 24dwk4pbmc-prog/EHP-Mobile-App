@@ -50,3 +50,7 @@ import ProfileSetupScreen from "../screens/ProfileSetupScreen";
     </NavigationContainer>
   );
 }
+<Stack.Screen
+  name="ProfileSetup"
+  component={ProfileSetupScreen}
+/>
