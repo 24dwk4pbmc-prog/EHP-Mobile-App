@@ -3,6 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import LoginScreen from "../screens/LoginScreen";
+import ProfileSetupScreen from "../screens/ProfileSetupScreen";
 import HomeScreen from "../screens/HomeScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 import NutritionScreen from "../screens/NutritionScreen";
@@ -22,10 +23,15 @@ export default function AppNavigator() {
         />
 
         <Stack.Screen
+          name="ProfileSetup"
+          component={ProfileSetupScreen}
+        />
+
+        <Stack.Screen
           name="Home"
           component={HomeScreen}
         />
-import ProfileSetupScreen from "../screens/ProfileSetupScreen";
+
         <Stack.Screen
           name="Profile"
           component={ProfileScreen}
@@ -50,7 +56,3 @@ import ProfileSetupScreen from "../screens/ProfileSetupScreen";
     </NavigationContainer>
   );
 }
-<Stack.Screen
-  name="ProfileSetup"
-  component={ProfileSetupScreen}
-/>
