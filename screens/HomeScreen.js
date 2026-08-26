@@ -1,64 +1,116 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Pressable } from "react-native";
 
-export default function HomeScreen() {
+export default function HomeScreen({ navigation }) {
   return (
     <View style={styles.container}>
+
       <Text style={styles.logo}>EHP</Text>
+
       <Text style={styles.title}>
         Elite Human Performance
       </Text>
 
-      <Text style={styles.text}>
+      <Text style={styles.subtitle}>
         Athlete Dashboard
       </Text>
 
-      <Text style={styles.card}>
-        🎯 Goals
-      </Text>
+      <Pressable 
+        style={styles.card}
+        onPress={() => navigation.navigate("Profile")}
+      >
+        <Text style={styles.cardTitle}>👤 Athlete Profile</Text>
+        <Text style={styles.cardText}>
+          Track your stats, goals and body progress
+        </Text>
+      </Pressable>
 
-      <Text style={styles.card}>
-        🍽 Nutrition
-      </Text>
 
-      <Text style={styles.card}>
-        💪 Training
-      </Text>
+      <Pressable 
+        style={styles.card}
+        onPress={() => navigation.navigate("Training")}
+      >
+        <Text style={styles.cardTitle}>💪 Training</Text>
+        <Text style={styles.cardText}>
+          Workouts, programs and performance plans
+        </Text>
+      </Pressable>
 
-      <Text style={styles.card}>
-        ⚖ Progress
-      </Text>
+
+      <Pressable 
+        style={styles.card}
+        onPress={() => navigation.navigate("Nutrition")}
+      >
+        <Text style={styles.cardTitle}>🍽 Nutrition</Text>
+        <Text style={styles.cardText}>
+          Calories, protein and meal planning
+        </Text>
+      </Pressable>
+
+
+      <Pressable 
+        style={styles.card}
+        onPress={() => navigation.navigate("Progress")}
+      >
+        <Text style={styles.cardTitle}>📊 Progress</Text>
+        <Text style={styles.cardText}>
+          Weight tracking and results
+        </Text>
+      </Pressable>
+
+
     </View>
   );
 }
 
+
 const styles = StyleSheet.create({
-  container:{
+
+  container: {
     flex:1,
-    backgroundColor:"#050505",
+    backgroundColor:"#ffffff",
     padding:25,
     justifyContent:"center"
   },
+
   logo:{
-    color:"#e21b23",
-    fontSize:50,
-    fontWeight:"bold"
+    fontSize:48,
+    fontWeight:"900",
+    color:"#d60000",
+    textAlign:"center"
   },
+
   title:{
-    color:"white",
     fontSize:24,
-    fontWeight:"bold",
-    marginBottom:20
+    fontWeight:"700",
+    textAlign:"center",
+    marginTop:10
   },
-  text:{
-    color:"white",
-    fontSize:20
+
+  subtitle:{
+    fontSize:18,
+    textAlign:"center",
+    marginBottom:30,
+    color:"#555"
   },
+
   card:{
-    color:"white",
-    backgroundColor:"#171717",
+    backgroundColor:"#111",
     padding:20,
-    marginTop:10,
-    borderRadius:15
+    borderRadius:15,
+    marginBottom:15
+  },
+
+  cardTitle:{
+    color:"#fff",
+    fontSize:20,
+    fontWeight:"700"
+  },
+
+  cardText:{
+    color:"#ccc",
+    marginTop:8,
+    fontSize:14
   }
+
 });
