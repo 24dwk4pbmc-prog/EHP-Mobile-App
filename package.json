@@ -1,9 +1,18 @@
-"dependencies": {
-  "expo": "latest",
-  "react": "latest",
-  "react-native": "latest",
-  "@react-navigation/native": "latest",
-  "@react-navigation/native-stack": "latest",
-  "react-native-screens": "latest",
-  "react-native-safe-area-context": "latest"
+{
+  "dependencies": {
+    "expo": "latest",
+    "react": "latest",
+    "react-native": "latest",
+    "@react-navigation/native": "latest",
+    "@react-navigation/native-stack": "latest",
+    "react-native-screens": "latest",
+    "react-native-safe-area-context": "latest",
+    "better-auth": "^1.6.29",
+    "@better-auth/expo": "^1.6.29",
+    "expo-secure-store": "latest",
+    "expo-network": "latest",
+    "expo-linking": "latest",
+    "expo-web-browser": "latest",
+    "expo-constants": "latest"
+  }
 }
